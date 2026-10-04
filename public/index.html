@@ -4,249 +4,2162 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Pull District | Trading Cards & Collectibles</title>
-  <meta name="description" content="The Pull District – Trading Cards, Collectibles, Graded Cards, Funko, Plüsch und Community. Pull Hard. Trade Smart. Collect Forever.">
-  <meta name="theme-color" content="#03040b">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="The Pull District – Trading Cards, Collectibles und echte Sammlerleidenschaft.">
+  <meta name="theme-color" content="#03050d">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="The Pull District Startseite">
-        <span class="brand-badge">
-          <span class="brand-rays"></span>
-          <strong>TPD</strong>
+<style>
+/* ==========================================================
+   THE PULL DISTRICT
+   SYSTEME.IO FULLSCREEN HOMEPAGE
+   OHNE HEADER / OHNE NEWSLETTER
+========================================================== */
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    background: #03050d !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.tpd-site {
+    --bg: #03050d;
+    --bg2: #070b18;
+    --card: #0b1020;
+    --card2: #10162a;
+
+    --blue: #00c8ff;
+    --blue2: #007cff;
+    --purple: #784cff;
+    --pink: #e238ff;
+
+    --text: #ffffff;
+    --muted: #aeb8cf;
+
+    position: relative;
+
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    left: 50%;
+    margin-left: -50vw !important;
+
+    overflow: hidden;
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 5%,
+            rgba(0,200,255,.10),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 12%,
+            rgba(226,56,255,.10),
+            transparent 25%
+        ),
+        var(--bg);
+}
+
+.tpd-inner {
+    width: calc(100% - 80px);
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.tpd-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.tpd-eyebrow {
+    margin-bottom: 15px;
+
+    color: var(--blue);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.tpd-heading {
+    margin: 0;
+
+    font-size:
+        clamp(36px, 4.2vw, 62px);
+
+    line-height: .95;
+
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.tpd-text {
+    max-width: 720px;
+
+    margin: 20px 0 0;
+
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.tpd-gradient-text {
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue),
+            var(--purple),
+            var(--pink)
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.tpd-btn {
+    min-height: 54px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 30px;
+
+    border-radius: 8px;
+
+    color: #fff !important;
+    text-decoration: none !important;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease,
+        filter .25s ease;
+}
+
+.tpd-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.12);
+}
+
+.tpd-btn-main {
+    border: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #008cff,
+            #6549ff,
+            #cc34ff
+        );
+
+    box-shadow:
+        0 0 35px
+        rgba(102,73,255,.28);
+}
+
+.tpd-btn-outline {
+    border:
+        1px solid
+        rgba(120,76,255,.65);
+
+    background:
+        rgba(8,11,24,.55);
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.tpd-hero {
+    position: relative;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,5,13,1) 0%,
+            rgba(3,5,13,.94) 34%,
+            rgba(3,5,13,.66) 55%,
+            rgba(3,5,13,.18) 100%
+        ),
+        url("https://d1yei2z3i6k35z.cloudfront.net/18925235/6a985dcf57fb25.84735111_ChatGPTImage2.Sept.202619_32_24.png")
+        center center /
+        cover no-repeat;
+}
+
+.tpd-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(0,200,255,.12),
+            transparent 23%
+        ),
+        radial-gradient(
+            circle at 83% 50%,
+            rgba(226,56,255,.13),
+            transparent 25%
+        );
+
+    pointer-events: none;
+}
+
+.tpd-hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 220px;
+
+    background:
+        linear-gradient(
+            transparent,
+            #03050d
+        );
+
+    pointer-events: none;
+}
+
+.tpd-hero-content {
+    position: relative;
+    z-index: 5;
+
+    max-width: 830px;
+
+    padding: 90px 0;
+}
+
+.tpd-hero-label {
+    margin-bottom: 22px;
+
+    color: var(--blue);
+
+    font-size: 13px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.tpd-hero-title {
+    margin: 0;
+
+    font-size:
+        clamp(65px, 9.5vw, 145px);
+
+    line-height: .78;
+
+    letter-spacing: -6px;
+
+    text-transform: uppercase;
+}
+
+.tpd-hero-title span {
+    display: block;
+}
+
+.tpd-slogan {
+    margin-top: 35px;
+
+    font-size:
+        clamp(16px, 1.7vw, 23px);
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.tpd-s1 {
+    color: var(--blue);
+}
+
+.tpd-s2 {
+    color: #9c64ff;
+}
+
+.tpd-s3 {
+    color: #ff47d7;
+}
+
+.tpd-hero-description {
+    max-width: 650px;
+
+    margin: 25px 0 0;
+
+    color: #bec6d9;
+
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.tpd-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+
+/* ==========================================================
+   TRUST BAR
+========================================================== */
+
+.tpd-trust {
+    border-top:
+        1px solid rgba(255,255,255,.06);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
+
+    background:
+        rgba(7,10,22,.96);
+}
+
+.tpd-trust-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+.tpd-trust-box {
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 25px;
+
+    border-right:
+        1px solid rgba(255,255,255,.06);
+}
+
+.tpd-trust-box:last-child {
+    border-right: 0;
+}
+
+.tpd-trust-icon {
+    font-size: 26px;
+}
+
+.tpd-trust-title {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.tpd-trust-sub {
+    margin-top: 4px;
+
+    color: #8f99b4;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   CATEGORY CARDS
+========================================================== */
+
+.tpd-category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap: 20px;
+
+    margin-top: 45px;
+}
+
+.tpd-category {
+    position: relative;
+
+    min-height: 420px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 30px;
+
+    border:
+        1px solid rgba(117,74,255,.35);
+
+    border-radius: 17px;
+
+    color: white;
+
+    cursor: default;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3,5,13,1) 0%,
+            rgba(3,5,13,.65) 35%,
+            rgba(3,5,13,.08) 75%
+        ),
+        var(--tpd-image)
+        center center /
+        cover no-repeat;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.tpd-category:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(0,200,255,.65);
+
+    box-shadow:
+        0 18px 55px
+        rgba(0,200,255,.08);
+}
+
+.tpd-category-content {
+    position: relative;
+    z-index: 2;
+}
+
+.tpd-category-small {
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.tpd-category h3 {
+    margin: 8px 0 9px;
+
+    font-size: 28px;
+
+    text-transform: uppercase;
+}
+
+.tpd-category p {
+    max-width: 360px;
+
+    margin: 0;
+
+    color: #c0c7d8;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   SHOP
+========================================================== */
+
+.tpd-shop {
+    background:
+        radial-gradient(
+            circle at 25% 0%,
+            rgba(0,200,255,.07),
+            transparent 35%
+        ),
+        #060914;
+}
+
+.tpd-shop-head {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.tpd-shop-card {
+    position: relative;
+
+    margin-top: 45px;
+
+    min-height: 500px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    border:
+        1px solid rgba(106,73,255,.45);
+
+    background:
+        #090d1c;
+
+    box-shadow:
+        0 30px 90px
+        rgba(0,0,0,.25);
+}
+
+.tpd-shop-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 70px;
+}
+
+.tpd-shop-tag {
+    color: var(--blue);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.tpd-shop-content h3 {
+    margin:
+        15px 0 20px;
+
+    font-size:
+        clamp(34px, 4vw, 58px);
+
+    line-height: .95;
+
+    text-transform: uppercase;
+}
+
+.tpd-shop-content p {
+    margin: 0 0 30px;
+
+    max-width: 550px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.tpd-shop-image {
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #090d1c,
+            rgba(9,13,28,.05)
+        ),
+        url("https://d1yei2z3i6k35z.cloudfront.net/18925235/6a9870e6123b08.08903624_ChatGPTImage2.Sept.202620_54_19.png")
+        center center /
+        cover no-repeat;
+}
+
+
+/* ==========================================================
+   ABOUT
+========================================================== */
+
+.tpd-about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.tpd-about-image {
+    min-height: 600px;
+
+    border-radius: 22px;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            rgba(4,6,16,.1),
+            rgba(4,6,16,.45)
+        ),
+        url("https://d1yei2z3i6k35z.cloudfront.net/18925235/6a9871213b6ad5.78690415_photo-output6.HEIC")
+        center /
+        cover no-repeat;
+}
+
+.tpd-about-points {
+    margin-top: 30px;
+
+    display: grid;
+
+    gap: 13px;
+}
+
+.tpd-about-point {
+    padding: 17px 19px;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius: 11px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    color: #d1d6e5;
+
+    font-size: 14px;
+}
+
+.tpd-check {
+    margin-right: 10px;
+
+    color: var(--pink);
+
+    font-weight: 900;
+}
+
+
+/* ==========================================================
+   GRADING
+========================================================== */
+
+.tpd-grading {
+    background:
+        #060914;
+}
+
+.tpd-grading-box {
+    display: grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    border:
+        1px solid rgba(125,76,255,.55);
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(123,62,255,.22),
+            transparent 38%
+        ),
+        #080c1b;
+}
+
+.tpd-grading-content {
+    padding: 70px;
+}
+
+.tpd-grading-list {
+    margin:
+        30px 0;
+
+    display: grid;
+
+    gap: 14px;
+}
+
+.tpd-grading-item {
+    color: #d1d7e6;
+
+    font-size: 15px;
+}
+
+.tpd-grading-item::before {
+    content: "✓";
+
+    margin-right: 11px;
+
+    color: var(--pink);
+
+    font-weight: 900;
+}
+
+.tpd-grading-image {
+    min-height: 600px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #080c1b 0%,
+            transparent 30%
+        ),
+        url("https://d1yei2z3i6k35z.cloudfront.net/18925235/6a9874b20e8fd6.42830151_ChatGPTImage2.Sept.202621_10_26.png")
+        center /
+        cover no-repeat;
+}
+
+
+/* ==========================================================
+   COMMUNITY
+========================================================== */
+
+.tpd-community-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0,1fr));
+
+    gap: 14px;
+
+    margin-top: 40px;
+}
+
+.tpd-community-photo {
+    aspect-ratio: 1 / 1.15;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 13px;
+}
+
+.tpd-community-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .35s ease;
+}
+
+.tpd-community-photo:hover img {
+    transform: scale(1.06);
+}
+
+
+/* ==========================================================
+   EVENTS
+========================================================== */
+
+.tpd-events {
+    background: #060914;
+}
+
+.tpd-event-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap: 20px;
+
+    margin-top: 40px;
+}
+
+.tpd-event-card {
+    min-height: 300px;
+
+    padding: 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border-radius: 15px;
+
+    border:
+        1px solid rgba(116,75,255,.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            #0c1121,
+            #080b16
+        );
+}
+
+.tpd-event-label {
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.tpd-event-card h3 {
+    margin:
+        14px 0 12px;
+
+    font-size: 25px;
+}
+
+.tpd-event-card p {
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   SOCIAL
+========================================================== */
+
+.tpd-social-box {
+    padding: 60px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(97,83,255,.4);
+
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(0,200,255,.09),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 60%,
+            rgba(226,56,255,.09),
+            transparent 30%
+        ),
+        #080b18;
+}
+
+.tpd-social-box .tpd-text {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .tpd-category-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .tpd-shop-card,
+    .tpd-about-grid,
+    .tpd-grading-box {
+        grid-template-columns:
+            1fr;
+    }
+
+    .tpd-community-grid {
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 780px) {
+
+    .tpd-inner {
+        width:
+            calc(100% - 28px);
+    }
+
+    .tpd-section {
+        padding:
+            70px 0;
+    }
+
+    .tpd-hero {
+        min-height:
+            100svh;
+
+        align-items:
+            flex-end;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(3,5,13,.2),
+                rgba(3,5,13,.65) 45%,
+                rgba(3,5,13,1) 85%
+            ),
+            url("https://d1yei2z3i6k35z.cloudfront.net/18925235/6a985dcf57fb25.84735111_ChatGPTImage2.Sept.202619_32_24.png")
+            center /
+            cover no-repeat;
+    }
+
+    .tpd-hero-title {
+        font-size:
+            clamp(
+                55px,
+                18vw,
+                95px
+            );
+
+        letter-spacing:
+            -4px;
+    }
+
+    .tpd-trust-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .tpd-trust-box:nth-child(2) {
+        border-right: 0;
+    }
+
+    .tpd-category-grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .tpd-category {
+        min-height:
+            290px;
+
+        padding:
+            20px;
+    }
+
+    .tpd-category h3 {
+        font-size:
+            20px;
+    }
+
+    .tpd-shop-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .tpd-shop-content,
+    .tpd-grading-content {
+        padding:
+            40px 25px;
+    }
+
+    .tpd-shop-image,
+    .tpd-grading-image,
+    .tpd-about-image {
+        min-height:
+            400px;
+    }
+
+    .tpd-community-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .tpd-event-grid {
+        grid-template-columns:
+            1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .tpd-category-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .tpd-category {
+        min-height:
+            350px;
+    }
+
+    .tpd-trust-box {
+        padding:
+            18px 12px;
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+    }
+}
+
+</style>
+
+
+<main class="tpd-site">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="tpd-hero">
+
+<div class="tpd-inner">
+
+<div class="tpd-hero-content">
+
+
+<div class="tpd-hero-label">
+    Trading Cards · Collectibles · Community
+</div>
+
+
+<h1 class="tpd-hero-title">
+
+    <span>
+        THE PULL
+    </span>
+
+    <span class="tpd-gradient-text">
+        DISTRICT
+    </span>
+
+</h1>
+
+
+<div class="tpd-slogan">
+
+    <span class="tpd-s1">
+        PULL HARD
+    </span>
+
+    &nbsp;·&nbsp;
+
+    <span class="tpd-s2">
+        TRADE SMART
+    </span>
+
+    &nbsp;·&nbsp;
+
+    <span class="tpd-s3">
+        COLLECT FOREVER
+    </span>
+
+</div>
+
+
+<p class="tpd-hero-description">
+
+    Dein District für Trading Cards,
+    Collectibles und echte Sammlerleidenschaft.
+
+    Entdecke Pokémon,
+    One Piece,
+    Dragon Ball,
+    Funko,
+    Einzelkarten,
+    Graded Cards
+    und besondere Collectibles.
+
+</p>
+
+
+<div class="tpd-hero-buttons">
+
+    <a
+        href="https://3b09-thepulldistrict.systeme.io/shop"
+        class="
+            tpd-btn
+            tpd-btn-main
+        "
+    >
+        JETZT SHOPPEN
+    </a>
+
+
+    <a
+        href="https://3b09-thepulldistrict.systeme.io/shop"
+        class="
+            tpd-btn
+            tpd-btn-outline
+        "
+    >
+        NEUE DROPS
+    </a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRUST
+===================================================== -->
+
+<section class="tpd-trust">
+
+<div class="tpd-inner">
+
+<div class="tpd-trust-grid">
+
+
+<div class="tpd-trust-box">
+
+    <div class="tpd-trust-icon">
+        ⚡
+    </div>
+
+    <div>
+
+        <div class="tpd-trust-title">
+            Schneller Versand
+        </div>
+
+        <div class="tpd-trust-sub">
+            Sicher & zuverlässig
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="tpd-trust-box">
+
+    <div class="tpd-trust-icon">
+        🔒
+    </div>
+
+    <div>
+
+        <div class="tpd-trust-title">
+            Sichere Zahlung
+        </div>
+
+        <div class="tpd-trust-sub">
+            Geschützter Checkout
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="tpd-trust-box">
+
+    <div class="tpd-trust-icon">
+        ✦
+    </div>
+
+    <div>
+
+        <div class="tpd-trust-title">
+            Collectibles
+        </div>
+
+        <div class="tpd-trust-sub">
+            Für echte Sammler
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="tpd-trust-box">
+
+    <div class="tpd-trust-icon">
+        💜
+    </div>
+
+    <div>
+
+        <div class="tpd-trust-title">
+            Community
+        </div>
+
+        <div class="tpd-trust-sub">
+            Collect Forever
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     KATEGORIEN – NUR ANZEIGE
+===================================================== -->
+
+<section class="tpd-section">
+
+<div class="tpd-inner">
+
+
+<div class="tpd-eyebrow">
+    Unser Sortiment
+</div>
+
+
+<h2 class="tpd-heading">
+
+    Das findest du im
+
+    <span class="tpd-gradient-text">
+        District.
+    </span>
+
+</h2>
+
+
+<p class="tpd-text">
+
+    Trading Cards,
+    Collectibles und ausgewählte
+    Sammlerstücke für echte Collector.
+
+</p>
+
+
+<div class="tpd-category-grid">
+
+
+<!-- POKEMON -->
+
+<div
+    class="tpd-category"
+    style="
+        --tpd-image:
+        url('https://d1yei2z3i6k35z.cloudfront.net/18925235/6a986c2c7fc146.28497766_7E463046-8124-486D-A064-707BE3122686.jpg');
+    "
+>
+
+<div class="tpd-category-content">
+
+    <div class="tpd-category-small">
+        Trading Cards
+    </div>
+
+    <h3>
+        Pokémon
+    </h3>
+
+    <p>
+        Booster,
+        Displays,
+        Boxen,
+        Einzelkarten
+        und Collectibles.
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- ONE PIECE -->
+
+<div
+    class="tpd-category"
+    style="
+        --tpd-image:
+        url('https://d1yei2z3i6k35z.cloudfront.net/18925235/6a986c2c833030.92877785_7E463046-8124-486D-A064-707BE31226862.jpg');
+    "
+>
+
+<div class="tpd-category-content">
+
+    <div class="tpd-category-small">
+        Trading Card Game
+    </div>
+
+    <h3>
+        One Piece
+    </h3>
+
+    <p>
+        Booster,
+        Displays,
+        Karten und
+        Sammlerstücke.
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- DRAGON BALL -->
+
+<div
+    class="tpd-category"
+    style="
+        --tpd-image:
+        url('https://d1yei2z3i6k35z.cloudfront.net/18925235/6a986c2c75cd77.30456970_7E463046-8124-486D-A064-707BE31226863.jpg');
+    "
+>
+
+<div class="tpd-category-content">
+
+    <div class="tpd-category-small">
+        Cards & Collectibles
+    </div>
+
+    <h3>
+        Dragon Ball
+    </h3>
+
+    <p>
+        Karten,
+        Figuren und
+        ausgewählte
+        Collectibles.
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- FUNKO -->
+
+<div
+    class="tpd-category"
+    style="
+        --tpd-image:
+        url('https://d1yei2z3i6k35z.cloudfront.net/18925235/6a986c2c8380b2.72178100_7E463046-8124-486D-A064-707BE31226864.jpg');
+    "
+>
+
+<div class="tpd-category-content">
+
+    <div class="tpd-category-small">
+        Collectibles
+    </div>
+
+    <h3>
+        Funko
+    </h3>
+
+    <p>
+        Figuren,
+        Special Editions
+        und Sammlerstücke.
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- EINZELKARTEN -->
+
+<div
+    class="tpd-category"
+    style="
+        --tpd-image:
+        url('https://d1yei2z3i6k35z.cloudfront.net/18925235/6a986c2c7a44f3.43023446_7E463046-8124-486D-A064-707BE31226865.jpg');
+    "
+>
+
+<div class="tpd-category-content">
+
+    <div class="tpd-category-small">
+        Singles
+    </div>
+
+    <h3>
+        Einzelkarten
+    </h3>
+
+    <p>
+        Einzelne Karten
+        für den gezielten
+        Ausbau deiner Sammlung.
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- GRADED -->
+
+<div
+    class="tpd-category"
+    style="
+        --tpd-image:
+        url('https://d1yei2z3i6k35z.cloudfront.net/18925235/6a986c2c8191b6.94824135_7E463046-8124-486D-A064-707BE31226866.jpg');
+    "
+>
+
+<div class="tpd-category-content">
+
+    <div class="tpd-category-small">
+        Graded
+    </div>
+
+    <h3>
+        Graded Cards
+    </h3>
+
+    <p>
+        Gegradete
+        Sammelkarten
+        für deine Collection.
+    </p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SHOP
+===================================================== -->
+
+<section class="tpd-section tpd-shop">
+
+<div class="tpd-inner">
+
+
+<div class="tpd-shop-head">
+
+<div>
+
+    <div class="tpd-eyebrow">
+        Aktuell im District
+    </div>
+
+    <h2 class="tpd-heading">
+
+        Jetzt
+
+        <span class="tpd-gradient-text">
+            shoppen
         </span>
-        <span class="brand-text">
-          <b>THE PULL DISTRICT</b>
-          <small>PULL HARD • TRADE SMART</small>
+
+    </h2>
+
+</div>
+
+
+<a
+    href="https://3b09-thepulldistrict.systeme.io/shop"
+    class="
+        tpd-btn
+        tpd-btn-outline
+    "
+>
+    ALLE PRODUKTE
+</a>
+
+</div>
+
+
+
+<div class="tpd-shop-card">
+
+
+<div class="tpd-shop-content">
+
+    <div class="tpd-shop-tag">
+        Live Shop
+    </div>
+
+
+    <h3>
+        Echte Produkte.
+        Echter Bestand.
+    </h3>
+
+
+    <p>
+
+        Alle aktuell verfügbaren
+        Trading Cards,
+        Figuren,
+        Collectibles und
+        Sammlerstücke findest
+        du direkt in unserem
+        The Pull District Shop.
+
+        Preise,
+        Produktbilder und
+        Verfügbarkeit werden
+        über unseren Shop
+        verwaltet.
+
+    </p>
+
+
+    <div>
+
+        <a
+            href="https://3b09-thepulldistrict.systeme.io/shop"
+            class="
+                tpd-btn
+                tpd-btn-main
+            "
+        >
+            SHOP ÖFFNEN
+        </a>
+
+    </div>
+
+</div>
+
+
+<div class="tpd-shop-image"></div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="tpd-section">
+
+<div class="tpd-inner">
+
+<div class="tpd-about-grid">
+
+
+<div class="tpd-about-image"></div>
+
+
+<div>
+
+    <div class="tpd-eyebrow">
+        The Pull District
+    </div>
+
+
+    <h2 class="tpd-heading">
+
+        Mehr als
+
+        <span class="tpd-gradient-text">
+            nur Karten.
         </span>
-      </a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Navigation öffnen">
-        <span></span><span></span><span></span>
-      </button>
+    </h2>
 
-      <nav id="main-nav" class="main-nav">
-        <a class="active" href="#top">Startseite</a>
-        <a href="#shop">Shop</a>
-        <a href="#pokemon">Pokémon</a>
-        <a href="#onepiece">One Piece</a>
-        <a href="#dragonball">Dragon Ball</a>
-        <a href="#graded">Graded</a>
-        <a href="#community">Community</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
 
-      <div class="header-actions" aria-label="Shop Aktionen">
-        <button class="icon-btn" title="Suche" aria-label="Suche">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.5 4.5"></path></svg>
-        </button>
-        <button class="icon-btn" title="Konto" aria-label="Konto">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21c.8-4.2 3.4-6.3 7.5-6.3s6.7 2.1 7.5 6.3"></path></svg>
-        </button>
-        <button class="icon-btn" title="Wunschliste" aria-label="Wunschliste">
-          <svg viewBox="0 0 24 24"><path d="M20.8 4.7c-2-2-5.2-2-7.2 0L12 6.3l-1.6-1.6c-2-2-5.2-2-7.2 0s-2 5.2 0 7.2L12 20.7l8.8-8.8c2-2 2-5.2 0-7.2z"></path></svg>
-        </button>
-        <button class="icon-btn cart-button" title="Warenkorb" aria-label="Warenkorb">
-          <svg viewBox="0 0 24 24"><path d="M3 4h2l2.3 10.2h10.9l2-7.3H7"></path><circle cx="9" cy="19" r="1.4"></circle><circle cx="18" cy="19" r="1.4"></circle></svg>
-          <span id="cart-count" class="cart-count">0</span>
-        </button>
-      </div>
-    </header>
+    <p class="tpd-text">
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-city" aria-hidden="true">
-          <i style="--h:42%;--x:4%"></i><i style="--h:55%;--x:10%"></i><i style="--h:36%;--x:16%"></i>
-          <i style="--h:62%;--x:23%"></i><i style="--h:47%;--x:30%"></i><i style="--h:72%;--x:37%"></i>
-          <i style="--h:52%;--x:44%"></i><i style="--h:80%;--x:50%"></i><i style="--h:58%;--x:57%"></i>
-          <i style="--h:69%;--x:64%"></i><i style="--h:45%;--x:71%"></i><i style="--h:62%;--x:78%"></i>
-          <i style="--h:50%;--x:85%"></i><i style="--h:67%;--x:92%"></i>
-        </div>
-        <div class="hero-lightning l1"></div>
-        <div class="hero-lightning l2"></div>
+        The Pull District verbindet
+        Trading Cards,
+        Collectibles,
+        Handel,
+        Community und
+        echte Sammlerleidenschaft.
 
-        <div class="hero-copy">
-          <p class="eyebrow">FRANKFURT • TRADING CARDS • COLLECTIBLES</p>
-          <h1>THE PULL<br>DISTRICT</h1>
-          <p class="hero-slogan"><span>PULL HARD</span><b>•</b><span>TRADE SMART</span><b>•</b><span>COLLECT FOREVER</span></p>
-          <p class="hero-description">Dein Premium-Shop für Trading Cards, Figuren & Collectibles. Geprüfte Qualität, faire Preise und eine Community, die deine Leidenschaft teilt.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#shop">Jetzt shoppen</a>
-            <a class="btn btn-ghost" href="#drops">Neue Drops</a>
-          </div>
+        Unser Ziel ist nicht einfach,
+        Produkte zu verkaufen.
+
+        Wir wollen einen District
+        schaffen, in dem Sammeln,
+        Tauschen und Entdecken
+        zusammengehören.
+
+    </p>
+
+
+    <div class="tpd-about-points">
+
+
+        <div class="tpd-about-point">
+
+            <span class="tpd-check">
+                ✓
+            </span>
+
+            Trading Cards &
+            Collectibles
+
         </div>
 
-        <div class="hero-showcase" aria-label="Collectibles Showcase">
-          <div class="graded-row">
-            <div class="slab slab-one"><small>TPD</small><b>10</b><span>POKÉMON</span></div>
-            <div class="slab slab-two"><small>TPD</small><b>9.5</b><span>ONE PIECE</span></div>
-            <div class="slab slab-three"><small>TPD</small><b>9</b><span>DRAGON BALL</span></div>
-          </div>
-          <div class="display-row">
-            <div class="display-box poke">151</div>
-            <div class="display-box one">OP</div>
-            <div class="display-box db">DB</div>
-          </div>
-          <div class="figure figure-a">★</div>
-          <div class="figure figure-b">✦</div>
-        </div>
-      </section>
 
-      <section class="trustbar">
-        <article><span>↻</span><div><b>Schneller Versand</b><small>1–2 Werktage</small></div></article>
-        <article><span>▣</span><div><b>Sichere Zahlung</b><small>SSL-verschlüsselt</small></div></article>
-        <article><span>✓</span><div><b>Geprüfte Produkte</b><small>Echt & verifiziert</small></div></article>
-        <article><span>◎</span><div><b>Collector Service</b><small>Wir sind für dich da</small></div></article>
-      </section>
+        <div class="tpd-about-point">
 
-      <section class="category-strip" id="drops">
-        <a id="pokemon" class="category-tile cat-pokemon" href="#shop">
-          <div class="orb orb-yellow">151</div><h3>POKÉMON</h3>
-        </a>
-        <a id="onepiece" class="category-tile cat-onepiece" href="#shop">
-          <div class="orb orb-red">OP</div><h3>ONE PIECE</h3>
-        </a>
-        <a id="dragonball" class="category-tile cat-dragonball" href="#shop">
-          <div class="orb orb-blue">DB</div><h3>DRAGON BALL</h3>
-        </a>
-        <a class="category-tile cat-funko" href="#shop">
-          <div class="orb orb-gold">POP</div><h3>FUNKO &<br>COLLECTIBLES</h3>
-        </a>
-        <a class="category-tile cat-singles" href="#shop">
-          <div class="card-stack-mini"><i></i><i></i><i></i></div><h3>EINZELKARTEN</h3>
-        </a>
-        <a class="category-tile cat-graded" href="#graded">
-          <div class="mini-slab"><b>TPD</b><span>9.5</span></div><h3>GRADED CARDS</h3>
-        </a>
-      </section>
+            <span class="tpd-check">
+                ✓
+            </span>
 
-      <section class="shop-section" id="shop">
-        <div class="section-title-row">
-          <div>
-            <p class="eyebrow">TOP PICKS</p>
-            <h2>BESTSELLER</h2>
-          </div>
-          <a href="#kontakt" class="all-link">Alle anzeigen →</a>
+            Pokémon,
+            One Piece &
+            Dragon Ball
+
         </div>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-visual pv-151"><span>151</span></div>
-            <div class="product-copy"><p class="product-name">Pokémon 151 Booster Display</p><strong>Preis auf Anfrage</strong><small class="stock">● Verfügbarkeit anfragen</small></div>
-            <div class="product-actions"><button class="cart-add" data-product="Pokémon 151 Booster Display">Anfragen</button><button class="heart">♡</button></div>
-          </article>
-          <article class="product-card">
-            <div class="product-visual pv-slab"><span>10</span></div>
-            <div class="product-copy"><p class="product-name">Charizard VMAX TPD Graded</p><strong>Preis auf Anfrage</strong><small class="stock">● Verfügbarkeit anfragen</small></div>
-            <div class="product-actions"><button class="cart-add" data-product="Charizard VMAX TPD Graded">Anfragen</button><button class="heart">♡</button></div>
-          </article>
-          <article class="product-card">
-            <div class="product-visual pv-op"><span>OP-07</span></div>
-            <div class="product-copy"><p class="product-name">One Piece OP-07 Booster Display</p><strong>Preis auf Anfrage</strong><small class="stock">● Verfügbarkeit anfragen</small></div>
-            <div class="product-actions"><button class="cart-add" data-product="One Piece OP-07 Booster Display">Anfragen</button><button class="heart">♡</button></div>
-          </article>
-          <article class="product-card">
-            <div class="product-visual pv-pop"><span>POP!</span></div>
-            <div class="product-copy"><p class="product-name">Funko Pop! Collectible</p><strong>Preis auf Anfrage</strong><small class="stock">● Verfügbarkeit anfragen</small></div>
-            <div class="product-actions"><button class="cart-add" data-product="Funko Pop Collectible">Anfragen</button><button class="heart">♡</button></div>
-          </article>
-          <article class="product-card">
-            <div class="product-visual pv-plush"><span>✦</span></div>
-            <div class="product-copy"><p class="product-name">Collector Plüsch</p><strong>Preis auf Anfrage</strong><small class="stock">● Verfügbarkeit anfragen</small></div>
-            <div class="product-actions"><button class="cart-add" data-product="Collector Plüsch">Anfragen</button><button class="heart">♡</button></div>
-          </article>
-          <article class="product-card">
-            <div class="product-visual pv-sleeves"><span>TPD</span></div>
-            <div class="product-copy"><p class="product-name">TPD Card Sleeves</p><strong>Preis auf Anfrage</strong><small class="stock">● Verfügbarkeit anfragen</small></div>
-            <div class="product-actions"><button class="cart-add" data-product="TPD Card Sleeves">Anfragen</button><button class="heart">♡</button></div>
-          </article>
-        </div>
-      </section>
 
-      <section id="graded" class="grading-section">
-        <div class="grading-copy">
-          <p class="eyebrow purple">TPD GRADING & AUTHENTICATION</p>
-          <h2>ECHT. GEPRÜFT.<br>VERTRAUENSWÜRDIG.</h2>
-          <p>Unsere TPD Grading- & Authentifizierungsprozesse stehen für höchste Standards. Jede Karte wird von Experten geprüft, sicher verpackt und mit einer eindeutigen TPD ID versehen.</p>
-          <ul>
-            <li>4-stufiges Prüfverfahren & Echtheitscheck</li>
-            <li>Sichere Versiegelung & manipulationssichere Slabs</li>
-            <li>Eindeutige TPD ID & QR-Code zur Verifizierung</li>
-            <li>Transparenz & Vertrauen für Sammler</li>
-          </ul>
-          <a href="#kontakt" class="btn btn-ghost">Mehr über TPD Grading</a>
-        </div>
-        <div class="grading-showcase">
-          <div class="big-slab grade-a"><header><span>TPD</span><b>10</b></header><main><strong>PIKACHU</strong><em>GEM MINT</em></main></div>
-          <div class="big-slab grade-b"><header><span>TPD</span><b>9.5</b></header><main><strong>GENGAR</strong><em>GEM MINT</em></main></div>
-          <div class="big-slab grade-c"><header><span>TPD</span><b>9</b></header><main><strong>CHARIZARD</strong><em>MINT</em></main></div>
-          <div class="grading-badges">
-            <span>✓ Verifiziert</span><span>◫ Geschützt</span><span>⌘ Nachvollziehbar</span><span>♡ Vertrauen</span>
-          </div>
-        </div>
-      </section>
+        <div class="tpd-about-point">
 
-      <section id="community" class="community-section">
-        <div class="section-title-row">
-          <div><p class="eyebrow">#THEPULLDISTRICT</p><h2>DIE COMMUNITY</h2></div>
-          <a class="all-link" href="https://www.instagram.com/thepulldistrict/" target="_blank" rel="noopener">Folge uns auf Instagram →</a>
-        </div>
-        <div class="community-grid">
-          <div class="community-shot shot-1"><span>TRADING</span></div>
-          <div class="community-shot shot-2"><span>SLABS</span></div>
-          <div class="community-shot shot-3"><span>EVENTS</span></div>
-          <div class="community-shot shot-4"><span>PULLS</span></div>
-          <div class="community-shot shot-5"><span>DISTRICT</span></div>
-        </div>
-      </section>
+            <span class="tpd-check">
+                ✓
+            </span>
 
-      <section id="events" class="events-section">
-        <div class="section-title-row"><div><p class="eyebrow">LIVE & VOR ORT</p><h2>KOMMENDE EVENTS</h2></div></div>
-        <div class="events-grid">
-          <article><span class="event-icon">▣</span><div><h3>Frankfurt</h3><p>Nächster Markttermin</p><small>Termin wird bekanntgegeben</small></div><b>Flohmarkt</b></article>
-          <article><span class="event-icon purple-bg">✦</span><div><h3>Card Collectors Day</h3><p>Hessen</p><small>Termin wird bekanntgegeben</small></div><b class="tag-purple">Card Event</b></article>
-          <article><span class="event-icon pink-bg">◎</span><div><h3>TPD Community Meetup</h3><p>Frankfurt am Main</p><small>Termin wird bekanntgegeben</small></div><b class="tag-pink">Meetup</b></article>
-          <article class="event-cta"><h3>DU MÖCHTEST DABEI SEIN?</h3><p>Erlebe die Collector-Szene, tausche, kaufe, verkaufe und vernetze dich mit Gleichgesinnten.</p><a href="#kontakt">Alle Events ansehen</a></article>
+            Funko,
+            Figuren &
+            Plüsch
+
         </div>
-      </section>
 
-      <section class="newsletter">
-        <div class="newsletter-icon">✉</div>
-        <div><h2>VERPASSE KEINEN DROP MEHR!</h2><p>Exklusive Angebote, neue Releases und Events direkt in dein Postfach.</p></div>
-        <form id="newsletter-form">
-          <input type="email" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse">
-          <button type="submit">Anmelden</button>
-        </form>
-      </section>
 
-      <section id="kontakt" class="contact-section">
-        <div>
-          <p class="eyebrow">KONTAKT</p>
-          <h2>DU SUCHST ETWAS BESTIMMTES?</h2>
-          <p>Schreib uns für Produktanfragen, Verfügbarkeit, Tausch oder Event-Infos.</p>
+        <div class="tpd-about-point">
+
+            <span class="tpd-check">
+                ✓
+            </span>
+
+            Einzelkarten &
+            Graded Cards
+
         </div>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:thepulldistrict@gmail.com">E-Mail senden</a>
-          <a class="btn btn-ghost" href="https://www.instagram.com/thepulldistrict/" target="_blank" rel="noopener">Instagram</a>
+
+
+        <div class="tpd-about-point">
+
+            <span class="tpd-check">
+                ✓
+            </span>
+
+            Events &
+            Collector Community
+
         </div>
-      </section>
-    </main>
 
-    <footer class="site-footer">
-      <div class="footer-brand">
-        <span class="brand-badge small"><strong>TPD</strong></span>
-        <div><strong>THE PULL DISTRICT</strong><p>PULL HARD • TRADE SMART • COLLECT FOREVER</p></div>
-      </div>
-      <div class="footer-links"><a href="#shop">Shop</a><a href="#community">Community</a><a href="#events">Events</a><a href="#kontakt">Kontakt</a></div>
-      <div class="footer-meta"><span>© <span id="year"></span> The Pull District</span><span>Impressum & Datenschutz folgen.</span></div>
-    </footer>
-  </div>
 
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GRADING
+===================================================== -->
+
+<section class="tpd-section tpd-grading">
+
+<div class="tpd-inner">
+
+<div class="tpd-grading-box">
+
+
+<div class="tpd-grading-content">
+
+    <div class="tpd-eyebrow">
+
+        TPD Grading &
+        Authentication
+
+    </div>
+
+
+    <h2 class="tpd-heading">
+
+        Echt.
+        Geprüft.
+
+        <span class="tpd-gradient-text">
+            Verifiziert.
+        </span>
+
+    </h2>
+
+
+    <p class="tpd-text">
+
+        TPD Grading verbindet
+        Bewertung,
+        Identifikation und
+        Präsentation deiner
+        Sammelkarten.
+
+    </p>
+
+
+    <div class="tpd-grading-list">
+
+
+        <div class="tpd-grading-item">
+            Mehrstufige Kartenprüfung
+        </div>
+
+
+        <div class="tpd-grading-item">
+            Bewertung des Kartenzustands
+        </div>
+
+
+        <div class="tpd-grading-item">
+            Sicherer Slab
+        </div>
+
+
+        <div class="tpd-grading-item">
+            Individuelle TPD-ID
+        </div>
+
+
+        <div class="tpd-grading-item">
+            QR-Code zur Authentifizierung
+        </div>
+
+
+    </div>
+
+
+    <a
+        href="TPD-GRADING-LINK"
+        class="
+            tpd-btn
+            tpd-btn-main
+        "
+    >
+        TPD GRADING
+    </a>
+
+
+</div>
+
+
+<div class="tpd-grading-image"></div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMMUNITY
+===================================================== -->
+
+<section class="tpd-section">
+
+<div class="tpd-inner">
+
+
+<div class="tpd-eyebrow">
+    #ThePullDistrict
+</div>
+
+
+<h2 class="tpd-heading">
+
+    Collector
+
+    <span class="tpd-gradient-text">
+        Community
+    </span>
+
+</h2>
+
+
+<p class="tpd-text">
+
+    Pulls,
+    Trades,
+    Cards,
+    Events und
+    Collectibles.
+
+    Werde Teil des
+    Districts.
+
+</p>
+
+
+<div class="tpd-community-grid">
+
+
+<div class="tpd-community-photo">
+
+    <img
+        src="https://d1yei2z3i6k35z.cloudfront.net/18925235/6a99e7021b5862.44048647_ChatGPTImage3.Sept.202623_28_18.png"
+        alt="The Pull District"
+    >
+
+</div>
+
+
+<div class="tpd-community-photo">
+
+    <img
+        src="https://d1yei2z3i6k35z.cloudfront.net/18925235/6a99e7021c6717.30664558_ChatGPTImage3.Sept.202623_25_24.png"
+        alt="Trading Cards"
+    >
+
+</div>
+
+
+<div class="tpd-community-photo">
+
+    <img
+        src="https://d1yei2z3i6k35z.cloudfront.net/18925235/6a99e7021b8551.01962721_ChatGPTImage3.Sept.202623_23_23.png"
+        alt="The Pull District Event"
+    >
+
+</div>
+
+
+<div class="tpd-community-photo">
+
+    <img
+        src="https://d1yei2z3i6k35z.cloudfront.net/18925235/6a99e7021b5862.44048647_ChatGPTImage3.Sept.202623_28_18.png"
+        alt="Collectibles"
+    >
+
+</div>
+
+
+<div class="tpd-community-photo">
+
+    <img
+        src="https://d1yei2z3i6k35z.cloudfront.net/18925235/6a99e7021c6717.30664558_ChatGPTImage3.Sept.202623_25_24.png"
+        alt="Collector Community"
+    >
+
+</div>
+
+
+</div>
+
+
+<div style="margin-top:35px;">
+
+    <a
+        href="https://www.instagram.com/thepulldistrict/"
+        class="
+            tpd-btn
+            tpd-btn-outline
+        "
+    >
+        @THEPULLDISTRICT
+    </a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EVENTS
+===================================================== -->
+
+<section class="tpd-section tpd-events">
+
+<div class="tpd-inner">
+
+
+<div class="tpd-eyebrow">
+    Offline trifft Online
+</div>
+
+
+<h2 class="tpd-heading">
+
+    Events &
+
+    <span class="tpd-gradient-text">
+        Meetups
+    </span>
+
+</h2>
+
+
+<div class="tpd-event-grid">
+
+
+<div class="tpd-event-card">
+
+<div>
+
+    <div class="tpd-event-label">
+        Card Events
+    </div>
+
+    <h3>
+        Collector Events
+    </h3>
+
+    <p>
+
+        Erlebe Trading Cards,
+        Collectibles und
+        The Pull District
+        direkt vor Ort.
+
+    </p>
+
+</div>
+
+</div>
+
+
+
+<div class="tpd-event-card">
+
+<div>
+
+    <div class="tpd-event-label">
+        Community
+    </div>
+
+    <h3>
+        Flohmärkte &
+        Card Shows
+    </h3>
+
+    <p>
+
+        Finde uns auf
+        ausgewählten Märkten,
+        Börsen und
+        Sammler-Events.
+
+    </p>
+
+</div>
+
+</div>
+
+
+
+<div class="tpd-event-card">
+
+<div>
+
+    <div class="tpd-event-label">
+        The Pull District
+    </div>
+
+    <h3>
+        Komm vorbei.
+    </h3>
+
+    <p>
+
+        Tauschen,
+        kaufen,
+        entdecken
+        und andere
+        Sammler treffen.
+
+    </p>
+
+</div>
+
+
+<div style="margin-top:25px;">
+
+    <a
+        href="EVENTS-LINK"
+        class="
+            tpd-btn
+            tpd-btn-outline
+        "
+    >
+        EVENTS ANSEHEN
+    </a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SOCIAL CTA
+===================================================== -->
+
+<section class="tpd-section">
+
+<div class="tpd-inner">
+
+
+<div class="tpd-social-box">
+
+
+<div class="tpd-eyebrow">
+    Follow the District
+</div>
+
+
+<h2 class="tpd-heading">
+
+    Pull Hard.
+    Trade Smart.
+
+    <span class="tpd-gradient-text">
+        Collect Forever.
+    </span>
+
+</h2>
+
+
+<p class="tpd-text">
+
+    Neue Karten,
+    neue Drops,
+    Events und
+    Einblicke in
+    The Pull District.
+
+</p>
+
+
+<div style="margin-top:30px;">
+
+    <a
+        href="https://www.instagram.com/thepulldistrict/"
+        class="
+            tpd-btn
+            tpd-btn-main
+        "
+    >
+        INSTAGRAM
+    </a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
 </body>
 </html>
