@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>The Pull District</title>
+  <meta name="description" content="The Pull District – Trading Cards, Collectibles, Ankauf und Events.">
+  <meta name="theme-color" content="#031022">
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#031022;color:#fff;font-family:Arial,Helvetica,sans-serif}
+    body{min-height:100vh}
+    .page{width:100%;overflow:hidden;background:#031022}
+    .design{position:relative;width:100%;max-width:1318px;margin:0 auto;line-height:0}
+    .design>img{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+    .hotspot{position:absolute;display:block;z-index:5;border-radius:8px}
+    .hotspot:focus-visible{outline:3px solid #ffd33d;outline-offset:2px;background:rgba(255,211,61,.08)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    /* Header */
+    .logo{left:2.6%;top:.2%;width:14.8%;height:5.4%}
+    .start{left:21.4%;top:.7%;width:7.3%;height:4.5%}
+    .shop{left:30.3%;top:.7%;width:5.2%;height:4.5%}
+    .ankauf-nav{left:36.3%;top:.7%;width:6.1%;height:4.5%}
+    .events-nav{left:43.5%;top:.7%;width:6.3%;height:4.5%}
+    .about-nav{left:50.4%;top:.7%;width:7.4%;height:4.5%}
+    .kontakt-nav{left:58.6%;top:.7%;width:6.7%;height:4.5%}
+    .songs-nav{left:66.2%;top:.7%;width:7.2%;height:4.5%}
+    .account{left:75.7%;top:.5%;width:9.0%;height:4.7%}
+    .cart{left:84.8%;top:.5%;width:14.4%;height:4.7%}
+    /* Hero */
+    .hero-shop{left:46.7%;top:31.0%;width:19.3%;height:4.5%}
+    .hero-more{left:67.4%;top:31.0%;width:18.0%;height:4.5%}
+    /* Ankauf */
+    .ankauf-btn{left:14.8%;top:52.1%;width:24.1%;height:4.0%}
+    /* Events */
+    .event-all{left:84.6%;top:58.0%;width:13.0%;height:3.0%}
+    .event-details{left:41.2%;top:73.5%;width:15.4%;height:3.4%}
+    /* Footer */
+    .impressum{left:17.3%;top:88.2%;width:9.3%;height:3.3%}
+    .datenschutz{left:29.0%;top:88.2%;width:9.4%;height:3.3%}
+    .agb{left:40.7%;top:88.2%;width:5.0%;height:3.3%}
+    .widerruf{left:48.0%;top:88.2%;width:13.8%;height:3.3%}
+    .widerrufsbelehrung{left:63.2%;top:88.2%;width:15.3%;height:3.3%}
+    .instagram{left:82.2%;top:87.7%;width:5.2%;height:4.2%}
+    .tiktok{left:88.6%;top:87.7%;width:4.6%;height:4.2%}
+    .youtube{left:94.0%;top:87.7%;width:5.2%;height:4.2%}
+    @media(max-width:700px){
+      .design{min-width:0}
+      .hotspot{border-radius:3px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="design" id="startseite">
+      <img src="/tpd-home.webp" alt="The Pull District Startseite">
+      <a class="hotspot logo" href="#startseite"><span class="sr-only">The Pull District Startseite</span></a>
+      <a class="hotspot start" href="#startseite"><span class="sr-only">Startseite</span></a>
+      <a class="hotspot shop" href="https://3b09-thepulldistrict.systeme.io/shop"><span class="sr-only">Shop</span></a>
+      <a class="hotspot ankauf-nav" href="#ankauf"><span class="sr-only">Ankauf</span></a>
+      <a class="hotspot events-nav" href="#events"><span class="sr-only">Events</span></a>
+      <a class="hotspot about-nav" href="#startseite"><span class="sr-only">Über uns</span></a>
+      <a class="hotspot kontakt-nav" href="mailto:thepulldistrict@gmail.com"><span class="sr-only">Kontakt</span></a>
+      <a class="hotspot songs-nav" href="#ki-songs"><span class="sr-only">KI Songs</span></a>
+      <a class="hotspot account" href="https://3b09-thepulldistrict.systeme.io/shop"><span class="sr-only">Account</span></a>
+      <a class="hotspot cart" href="https://3b09-thepulldistrict.systeme.io/shop"><span class="sr-only">Warenkorb</span></a>
+
+      <a class="hotspot hero-shop" href="https://3b09-thepulldistrict.systeme.io/shop"><span class="sr-only">Jetzt shoppen</span></a>
+      <a class="hotspot hero-more" href="#ankauf"><span class="sr-only">Mehr erfahren</span></a>
+
+      <span id="ankauf" style="position:absolute;top:46%;left:0"></span>
+      <a class="hotspot ankauf-btn" href="mailto:thepulldistrict@gmail.com?subject=Ankauf%20Anfrage"><span class="sr-only">Jetzt Ankauf anfragen</span></a>
+
+      <span id="events" style="position:absolute;top:57.2%;left:0"></span>
+      <a class="hotspot event-all" href="#events"><span class="sr-only">Alle Events ansehen</span></a>
+      <a class="hotspot event-details" href="mailto:thepulldistrict@gmail.com?subject=Event%20Anfrage"><span class="sr-only">Event Details</span></a>
+
+      <span id="ki-songs" style="position:absolute;top:84%;left:0"></span>
+      <a class="hotspot impressum" href="#impressum"><span class="sr-only">Impressum</span></a>
+      <a class="hotspot datenschutz" href="#datenschutz"><span class="sr-only">Datenschutz</span></a>
+      <a class="hotspot agb" href="#agb"><span class="sr-only">AGB</span></a>
+      <a class="hotspot widerruf" href="#vertrag-widerrufen"><span class="sr-only">Vertrag widerrufen</span></a>
+      <a class="hotspot widerrufsbelehrung" href="#widerrufsbelehrung"><span class="sr-only">Widerrufsbelehrung</span></a>
+      <a class="hotspot instagram" href="https://www.instagram.com/thepulldistrict/" target="_blank" rel="noopener"><span class="sr-only">Instagram</span></a>
+      <a class="hotspot tiktok" href="#" aria-label="TikTok"></a>
+      <a class="hotspot youtube" href="#" aria-label="YouTube"></a>
+    </div>
+  </main>
+</body>
+</html>
